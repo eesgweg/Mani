@@ -1,0 +1,31 @@
+name: MyFirstWorkflow
+
+on: push
+
+jobs:
+    job1:
+    name: ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step one
+        run: date
+    job2:
+    name: windows
+    runs-on: windows-latest
+    steps:
+      - name: Step one
+        run: date
+    job3:
+    name: macos
+    runs-on: macos-latest
+    steps:
+      - name: Step one
+        run: date
+    job4:
+    name: windows-next
+    needs: [job1, job2, job3]
+    runs-on: windows-latest
+    steps:
+      - name: Step one
+        run: date
+    
