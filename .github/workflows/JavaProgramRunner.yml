@@ -1,0 +1,10 @@
+name: JavaProgramRunner
+
+on: push
+
+jobs:
+    Java:
+	runs-on: windows-latest
+    steps:
+	  - name: Setup Java
+    uses: Fleshgrinder/setup-java@1.0.0
